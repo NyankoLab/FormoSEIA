@@ -1,0 +1,44 @@
+<html>
+<head>
+$CSS
+<meta charset='utf-8'>
+<style>
+.btn-info {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+}
+
+@media only screen and (hover: none) and(pointer: coarse) {
+  .btn {
+    font-size: calc(1vw + 1vh - 28%);
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}
+</style>
+<title>$HOSTNAME</title></head>
+<body>
+$BRANDSVG
+<form method='get' id='get_form' action=''></form>
+<form method='get' action='mode'>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTBRAND</span><input class='form-control' name='brand' length=32 value='$MODEA'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTMODEL</span><input class='form-control' name='model' length=32 value='$MODEB'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTMODE</span><input class='form-control' name='mode' length=32 value='$MODEC'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTGPIO</span><input class='form-control' name='gpio' length=32 value='$MODED'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTRANGE</span><input class='form-control' name='range' length=256 value='$MODEE'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTWRITABLE</span><input class='form-control' name='writable' length=256 value='$MODEF'><input class='input-group-text' type='submit'></div></td></tr>
+</form>
+$BRAND $MODEL $APPLIANCE</br>
+$HOSTNAME $VERSION$RSSI ($BUILD)</br>
+<div class='btn-group'>
+<button class='btn btn-primary' form='get_form' formaction='network'>$TEXTNETWORK</button>
+<button class='btn btn-primary' form='get_form' formaction='upgrade'>$TEXTUPGRADE</button>
+<button class='btn btn-primary' form='get_form' formaction='reboot'>$TEXTREBOOT</button>
+</div>
+$SAADUMP
+</body>
+</html>

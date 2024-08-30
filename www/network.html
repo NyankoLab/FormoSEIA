@@ -1,0 +1,30 @@
+<html>
+<head>
+$CSS
+<title>$HOSTNAME</title></head>
+<body>
+<form method='get' id='get_form' action=''></form>
+<table>
+<form method='get' action='ssid'>
+<tr><td><label>SSID</label></td><td><input name='ssid' length=32 value='$SSID'></td></tr>
+<tr><td><label>PASS</label></td><td><input type='password' name='pass' length=32></td><td><input type='submit'></td></tr>
+</form>
+<form method='get' action='mqtt'>
+<tr><td><label>MQTT</label></td><td><input name='mqtt' length=32 value='$MQTT'></td><td><input type='submit'></td></tr>
+</form>
+<form method='get' action='ntp'>
+<tr><td><label>ZONE</label></td><td><input name='zone' length=32 value='$ZONE'></td><td><input type='submit'></td></tr>
+</form>
+</table>
+$DATE
+<form>
+<button form='get_form' formaction=''>Home</button>
+<button form='get_form' formaction='reboot'>Reboot</button>
+</form>
+Temperature : $TEMPER</br>
+STA IP : $STAIP</br>
+STA Connected : $STACON ($STAISCON)</br>
+STA Disconnected : $STADIS</br>
+MQTT Connected : $MQTTCON</br>
+</body>
+</html>
