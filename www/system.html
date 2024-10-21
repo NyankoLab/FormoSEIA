@@ -9,12 +9,10 @@ $CSS
   --bs-btn-hover-bg: transparent;
   --bs-btn-hover-border-color: transparent;
 }
-
-@media only screen and (hover: none) and(pointer: coarse) {
+@media (pointer: coarse) {
   .btn {
     font-size: calc(1vw + 1vh - 28%);
   }
-
   .mobile-hidden {
     display: none;
   }
@@ -22,8 +20,8 @@ $CSS
 </style>
 <title>$HOSTNAME</title></head>
 <body>
-<div class='text-center'><a href='/'><img width='75%' src='$BRANDSVG'></a></div>
 <form method='get' id='get_form' action=''></form>
+<div class='text-center'><a href='/'><img width='75%' src='$BRANDSVG'></a></div>
 <form method='get' action='system'>
 <tr><td><div class='input-group'><span class='input-group-text'>$TEXTBRAND</span><input class='form-control' name='brand' length=32 value='$MODEA'><input class='input-group-text' type='submit'></div></td></tr>
 </form>
