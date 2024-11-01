@@ -1,6 +1,8 @@
 <html>
 <head>
 $CSS
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='formoseia.css'>
 <meta charset='utf-8'>
 <style>
 .btn-info {
@@ -8,14 +10,6 @@ $CSS
   --bs-btn-border-color: transparent;
   --bs-btn-hover-bg: transparent;
   --bs-btn-hover-border-color: transparent;
-}
-@media (pointer: coarse) {
-  .btn {
-    font-size: calc(1vw + 1vh - 28%);
-  }
-  .mobile-hidden {
-    display: none;
-  }
 }
 </style>
 <title>$HOSTNAME</title></head>
@@ -26,12 +20,13 @@ $FORMOSEIA
 $BRAND $MODEL $APPLIANCE</br>
 $HOSTNAME $VERSION$RSSI ($BUILD)</br>
 <div class='mobile-hidden'>
-<div class='btn-group'>
-<button class='btn btn-primary' form='get_form' formaction='system'>$TEXTSYSTEM</button>
-<button class='btn btn-primary' form='get_form' formaction='homeassistant'>Home Assistant</button>
-<button class='btn btn-primary' form='get_form' formaction='homekit'>HomeKit</button>
-<button class='btn btn-primary' form='get_form' formaction='upgrade'>$TEXTUPGRADE</button>
-<button class='btn btn-primary' form='get_form' formaction='reboot'>$TEXTREBOOT</button>
+<div class='fab-container'>
+<div class='fab shadow'><div class='fab-content'><span class='material-icons'>menu</span></div></div>
+<div class='sub-button shadow'><a href='/system'><span class='material-icons'>settings</span></a></div>
+<div class='sub-button shadow'><a href='/homeassistant'><span class='material-icons'>description</span></a></div>
+<div class='sub-button shadow'><a href='/homekit'><span class='material-icons'>home</span></a></div>
+<div class='sub-button shadow'><a href='/upgrade'><span class='material-icons'>upgrade</span></a></div>
+<div class='sub-button shadow'><a href='/reboot'><span class='material-icons'>restart_alt</span></a></div>
 </div>
 </div>
 </body>
