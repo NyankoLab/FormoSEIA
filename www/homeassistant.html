@@ -1,0 +1,25 @@
+<html>
+<head>
+$CSS
+<link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'/>
+<link rel='stylesheet' href='formoseia.css'>
+<meta charset='utf-8'>
+<title>$HOSTNAME</title></head>
+<body>
+<form method='get' id='get_form' action='homeassistant'></form>
+<div class='text-center'><a href='/'><img width='75%' src='homeassistant.svg'></a></div>
+$HOMEASSISTANT
+$BRAND $MODEL $APPLIANCE</br>
+$HOSTNAME $VERSION$RSSI ($BUILD)</br>
+<div class='mobile-hidden'>
+<div class='fab-container'>
+<div class='fab shadow'><div class='fab-content'><span class='material-symbols-outlined'>menu</span></div></div>
+<div class='sub-button shadow' style='--i:1;'><a href='/system'><span class='material-symbols-outlined'>settings</span></a></div>
+<div class='sub-button shadow' style='--i:2;'><a href='/homeassistant'><span class='material-symbols-outlined'>description</span></a></div>
+<div class='sub-button shadow' style='--i:3;'><a href='/matter'><span class='material-symbols-outlined'>matter</span></a></div>
+<div class='sub-button shadow' style='--i:4;'><a href='/update'><span class='material-symbols-outlined'>update</span></a></div>
+<div class='sub-button shadow' style='--i:5;'><a href='/reboot'><span class='material-symbols-outlined'>restart_alt</span></a></div>
+</div>
+</div>
+</body>
+</html>

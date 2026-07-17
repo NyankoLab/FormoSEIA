@@ -1,0 +1,59 @@
+<html>
+<head>
+$CSS
+<link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'/>
+<link rel='stylesheet' href='formoseia.css'>
+<meta charset='utf-8'>
+<style>
+.btn-info {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+}
+</style>
+<title>$HOSTNAME</title></head>
+<body>
+<form method='get' id='get_form' action='matter'></form>
+<div class='text-center'><a href='/'><img width='75%' src='matter.svg'></a></div>
+<table class='table table-striped'>
+<tr>
+<th><button class='btn btn-info'>Enable</button></th>
+<th><div class='btn-group'>
+<button class='$MATTERDISABLE' form='get_form' name='id' value='disable'>Disable</button>
+<button class='$MATTERENABLE' form='get_form' name='id' value='enable'>Enable</button>
+</div></th>
+</tr>
+<tr>
+<th><button class='btn btn-info'>Started</button></th>
+<th><button class='btn btn-info'>$MATTERISSTARTED</button></th>
+</tr>
+<tr>
+<th><button class='btn btn-info'>Fabric</button></th>
+<th><button class='btn btn-info'>$MATTERFABRICCOUNT</button></th>
+</tr>
+<tr>
+<th><button class='btn btn-info'>Pairing</button></th>
+<th><button class='btn btn-info'>$MATTERPAIRINGCODE</button></th>
+</tr>
+<tr>
+<th><button class='btn btn-info'>Factory</button></th>
+<th><div class='btn-group'>
+<button class='btn btn-primary' form='get_form' name='id' value='reset'>Reset</button>
+</div></th>
+</tr>
+</table>
+$BRAND $MODEL $APPLIANCE</br>
+$HOSTNAME $VERSION$RSSI ($BUILD)</br>
+<div class='mobile-hidden'>
+<div class='fab-container'>
+<div class='fab shadow'><div class='fab-content'><span class='material-symbols-outlined'>menu</span></div></div>
+<div class='sub-button shadow' style='--i:1;'><a href='/system'><span class='material-symbols-outlined'>settings</span></a></div>
+<div class='sub-button shadow' style='--i:2;'><a href='/homeassistant'><span class='material-symbols-outlined'>description</span></a></div>
+<div class='sub-button shadow' style='--i:3;'><a href='/matter'><span class='material-symbols-outlined'>matter</span></a></div>
+<div class='sub-button shadow' style='--i:4;'><a href='/update'><span class='material-symbols-outlined'>update</span></a></div>
+<div class='sub-button shadow' style='--i:5;'><a href='/reboot'><span class='material-symbols-outlined'>restart_alt</span></a></div>
+</div>
+</div>
+</body>
+</html>

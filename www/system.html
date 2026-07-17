@@ -1,0 +1,33 @@
+<html>
+<head>
+$CSS
+<link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined'/>
+<link rel='stylesheet' href='formoseia.css'>
+<meta charset='utf-8'>
+<title>$HOSTNAME</title></head>
+<body>
+<form method='get' id='get_form' action=''></form>
+<div class='text-center'><a href='/'><img width='75%' src='$BRANDSVG'></a></div>
+<form method='get' action='system'>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTBRAND</span><input class='form-control' name='brand' length=32 value='$MODEBRAND'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTMODEL</span><input class='form-control' name='model' length=32 value='$MODEMODEL'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTMODE</span><input class='form-control' name='mode' length=32 value='$MODEMODE'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTGPIO</span><input class='form-control' name='gpio' length=32 value='$MODEGPIO'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTRANGE</span><input class='form-control' name='range' length=256 value='$MODERANGE'></div></td></tr>
+<tr><td><div class='input-group'><span class='input-group-text'>$TEXTWRITABLE</span><input class='form-control' name='writable' length=256 value='$MODEWRITABLE'><input class='input-group-text' type='submit'></div></td></tr>
+</form>
+$BRAND $MODEL $APPLIANCE</br>
+$HOSTNAME $VERSION$RSSI ($BUILD)</br>
+<div class='btn-group'>
+<div class='fab-container'>
+<div class='fab shadow'><div class='fab-content'><span class='material-symbols-outlined'>menu</span></div></div>
+<div class='sub-button shadow' style='--i:1;'><a href='/network'><span class='material-symbols-outlined'>wifi</span></a></div>
+<div class='sub-button shadow' style='--i:2;'><a href='/homeassistant'><span class='material-symbols-outlined'>description</span></a></div>
+<div class='sub-button shadow' style='--i:3;'><a href='/matter'><span class='material-symbols-outlined'>matter</span></a></div>
+<div class='sub-button shadow' style='--i:4;'><a href='/update'><span class='material-symbols-outlined'>update</span></a></div>
+<div class='sub-button shadow' style='--i:5;'><a href='/reboot'><span class='material-symbols-outlined'>restart_alt</span></a></div>
+</div>
+</div>
+$SAADUMP
+</body>
+</html>
