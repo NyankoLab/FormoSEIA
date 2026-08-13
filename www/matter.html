@@ -13,6 +13,7 @@ $CSS
 }
 </style>
 <title>$HOSTNAME</title></head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <body>
 <form method='get' id='get_form' action='matter'></form>
 <div class='text-center'><a href='/'><img width='75%' src='matter.svg'></a></div>
@@ -49,11 +50,16 @@ $HOSTNAME $VERSION$RSSI ($BUILD)</br>
 <div class='fab-container'>
 <div class='fab shadow'><div class='fab-content'><span class='material-symbols-outlined'>menu</span></div></div>
 <div class='sub-button shadow' style='--i:1;'><a href='/system'><span class='material-symbols-outlined'>settings</span></a></div>
-<div class='sub-button shadow' style='--i:2;'><a href='/homeassistant'><span class='material-symbols-outlined'>description</span></a></div>
+<div class='sub-button shadow' style='--i:2;'><a href='/esphome'><span class='material-symbols-outlined'>description</span></a></div>
 <div class='sub-button shadow' style='--i:3;'><a href='/matter'><span class='material-symbols-outlined'>matter</span></a></div>
 <div class='sub-button shadow' style='--i:4;'><a href='/update'><span class='material-symbols-outlined'>update</span></a></div>
 <div class='sub-button shadow' style='--i:5;'><a href='/reboot'><span class='material-symbols-outlined'>restart_alt</span></a></div>
 </div>
 </div>
+<div id="qrcode"></div>
+<script>
+const qrContainer = document.getElementById("qrcode");
+new QRCode(qrContainer,{text:"$MATTERQRCODE",width:150,height:150,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
+</script>
 </body>
 </html>
