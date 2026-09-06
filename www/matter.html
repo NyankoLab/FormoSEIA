@@ -56,7 +56,7 @@ $HOSTNAME $VERSION$RSSI ($BUILD)</br>
 <div class='sub-button shadow' style='--i:5;'><a href='/reboot'><span class='material-symbols-outlined'>restart_alt</span></a></div>
 </div>
 </div>
-<div id="qrcode"></div>
+<div style="display: flex;justify-content: center;" id="qrcode"></div>
 <script>
 const qrContainer = document.getElementById("qrcode");
 new QRCode(qrContainer,{text:"$MATTERQRCODE",width:150,height:150,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H});
